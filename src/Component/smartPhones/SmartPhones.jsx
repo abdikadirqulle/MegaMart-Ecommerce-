@@ -1,8 +1,14 @@
 import React from 'react'
 import { AiOutlineRight } from 'react-icons/ai'
 
+
+import PhonesList from './phonesList'
+import { mobiles } from '../../../public/AllPhones'
+
 const SmartPhones = () => {
+
   return (
+
     <div className='max-w-6xl mx-auto mt-[127px]'>
         <div className='flex flex-col space-y-4'>
             {/* header name */}
@@ -20,6 +26,12 @@ const SmartPhones = () => {
             </div>
 
             {/* mobiles */}
+            <div className='flex gap-4'>
+               {mobiles.map((mobile) => (
+
+                <PhonesList key={mobile.name} {...mobile} />
+            ))}
+            </div>
         </div>
     </div>
   )

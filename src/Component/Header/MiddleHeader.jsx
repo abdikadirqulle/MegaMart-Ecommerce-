@@ -1,6 +1,7 @@
 import React from 'react'
 import { CiShoppingCart } from 'react-icons/ci'
-import {FiAlertCircle, FiSearch} from "react-icons/fi"
+import { FiSearch} from "react-icons/fi"
+import { TfiMenuAlt} from "react-icons/tfi"
 import {AiOutlineMenu, AiOutlineUser} from"react-icons/ai"
 
 const MiddleHeader = () => {
@@ -16,7 +17,7 @@ const MiddleHeader = () => {
             <form className='relative hidden md:flex'>
                 <input type="text" className='bg-Background3 text-Text text-[14px] pr-8 pl-10 outline-none rounded-md h-[48px] w-[507px]'  placeholder='Search essentials, groceries and more...' />
                 <FiSearch className='w-[18px] h-[18px] text-primary absolute top-4 left-3 cursor-pointer'/>
-                <FiAlertCircle className='w-[18px] h-[18px] text-primary absolute top-4 right-3 cursor-pointer'/>
+                <TfiMenuAlt className='w-[18px] h-[18px] text-primary absolute top-4 right-3 cursor-pointer'/>
             </form>
 
             <div className='flex gap-2 items-center'>

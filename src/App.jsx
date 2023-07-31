@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Component/Header/Header";
-import SmartPhones from "./Component/SmartPhones";
+import SmartPhones from "./Component/smartPhones/SmartPhones";
 import Categories from "./Component/Categories";
 import Electronics from "./Component/Electronics";
 import Essentials from "./Component/Essentials";
