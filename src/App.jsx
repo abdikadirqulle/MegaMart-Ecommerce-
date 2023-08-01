@@ -13,14 +13,14 @@ function App() {
       <div className="fixed w-full z-50" >
         <Header />
       </div>
-      <div className="mt-[14rem]">
+      <div className="mt-[14rem] mx-2">
         <Home />
         <SmartPhones />
         <Categories />
         <Electronics />
         <Essentials />
-        <Footer />
       </div>
+        <Footer />
     </div>
   );
 }

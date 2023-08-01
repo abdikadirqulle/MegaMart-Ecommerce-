@@ -13,9 +13,9 @@ const Footer = () => {
 
 
   return (
-    <div className="bg-primary w-full text-White relative overflow-hidden h-[592px]">
+    <div className="bg-primary w-full text-White relative overflow-hidden px-4">
       <div className="max-w-6xl relative mx-auto py-12 z-40 h-full">
-        <div className="flex items-start gap-14 ">
+        <div className="flex flex-col-reverse md:flex-row duration-100 items-start gap-14 ">
           <div className="flex flex-col gap-6">
             {/* logo */}
             <h1 className="font-bold text-[2rem]">MegaMart</h1>

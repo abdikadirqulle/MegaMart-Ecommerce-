@@ -13,7 +13,7 @@ export default {
       "Background2": "#F6F6FC",
       "Yellow" : "#F3BC01",
       "Background3": "#F3F9FB",
-      "Line" : "D9D9D9",
+      "Line" : "#D9D9D9",
       "White": "#FFFFFF",
       "Green": "#249B3E"
     },

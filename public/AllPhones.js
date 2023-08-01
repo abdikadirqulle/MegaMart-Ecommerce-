@@ -1,6 +1,15 @@
 import iphone12 from "./iphone 12 pro max.png"
 import AppleWatch from "./apple watch.png"
 
+// electronics images
+import AppleLogo from "./electronics/Apple_logo.png"
+import RealMeLOgo from "./electronics/Realme_logo.png"
+import RealmePHone from "./electronics/RealMe.png"
+import XiaomiLogo from "./electronics/Xiaomi_logo_.png"
+import XiaomiPhone from "./electronics/Xiaomi-phone.png"
+
+
+
 export const mobiles = [
     {
         name: "Galaxy S22 Ultra",
@@ -46,6 +55,7 @@ export const categories = [
   {
     name: "Watches",
     image: AppleWatch,
+    
   }, 
   {
     name: "Mobile",
@@ -74,7 +84,26 @@ export const categories = [
 ];
 
 
-
+export const electronics = [
+  {
+    name: "IPHONE",
+    image: iphone12,
+    logo: AppleLogo,
+    priceSave: "UP to 50% OFF",
+  },
+  {
+    name: "REALME",
+    image: RealmePHone,
+    logo: RealMeLOgo,
+    priceSave: "UP to 50% OFF",
+  },
+  {
+    name: "XIAOMI",
+    image: XiaomiPhone,
+    logo: XiaomiLogo,
+    priceSave: "UP to 50% OFF",
+  },
+];
 
 
 
