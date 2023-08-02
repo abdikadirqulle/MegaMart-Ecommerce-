@@ -1,5 +1,7 @@
 import React from 'react'
 import { AiOutlineRight } from 'react-icons/ai'
+import { essentials } from '../../../public/AllPhones'
+import Essential from './Essential'
 
 const Essentials = () => {
   return (
@@ -16,6 +18,13 @@ const Essentials = () => {
                 <AiOutlineRight  className='w-4 text-primary h-4'/> 
             </div>
         <div className='bg-Border w-full h-[1px]  absolute top-8 left-0 rounded-full '></div>
+        </div>
+        {/* esseintails */}
+
+        <div className='flex flex-wrap md:flex-row justify-center items-center gap-6 md:gap-9'>
+          {essentials.map((essential,index) => (
+            <Essential {...essential} key={index} index={index}/>
+          ))}
         </div>
     </div>
 </div>

@@ -1,9 +1,9 @@
 import { AiOutlineRight } from 'react-icons/ai'
-import Electrons from './electronics/Electrons';
+import Electrons from './Electrons';
 const Electronics = () => {
   return (
     <div className="max-w-6xl mx-auto  mt-[127px]">
-      <div className="flex relative flex-col space-y-4">
+      <div className="flex relative flex-col  space-y-4">
         <div className="flex relative justify-between items-center mb-10">
           <div className="relative">
             <h1 className="text-[14px] font-semibold">
@@ -25,8 +25,8 @@ const Electronics = () => {
           <Electrons />
         </div>
 
-        <div className="flex gap-4 items-center absolute -bottom-8 left-1/2 cursor-pointer text-White">
-          <div className="  w-[114px] h-2 relative">
+        <div className="flex gap-4 items-center  absolute -bottom-8 left-1/3 md:left-[25rem] lg:left-1/2 cursor-pointer text-White">
+          <div className="  w-[114px] h-2  relative">
             <div className="w-2 h-2 left-[31px] top-0 absolute bg-Line rounded-full" />
             <div className="w-2 h-2 left-[46px] top-0 absolute bg-Line rounded-full" />
             <div className="w-2 h-2 left-[61px] top-0 absolute bg-Line rounded-full" />

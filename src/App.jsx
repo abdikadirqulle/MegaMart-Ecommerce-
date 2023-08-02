@@ -1,11 +1,10 @@
-import { Outlet } from "react-router-dom";
 import Header from "./Component/Header/Header";
+import Home from './Component/Home/Home'
 import SmartPhones from "./Component/smartPhones/SmartPhones";
-import Categories from "./Component/Categories";
-import Electronics from "./Component/Electronics";
-import Essentials from "./Component/Essentials";
+import Categories from "./Component/Categories/Categories";
+import Electronics from "./Component/electronics/Electronics";
+import Essentials from "./Component/Essential/Essentials";
 import Footer from "./Component/Footer/Footer"
-import Home from './Component/Home.jsx'
 
 function App() {
   return (

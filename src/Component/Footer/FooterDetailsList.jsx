@@ -3,8 +3,8 @@ import React from 'react'
 const FooterDetailsList = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row duration-500 gap-8">
-        <div className="relative">
+      <div className="flex flex-col justify-center md:justify-start md:items-start items-center md:flex-row duration-500 gap-8">
+        <div className="relative  ">
           <h1>Most Popular Categories</h1>
           <div className="w-full h-[3px] bg-Border absolute top-9 left-0"></div>
 
@@ -20,7 +20,7 @@ const FooterDetailsList = () => {
           </ul>
         </div>
 
-        <div className="relative">
+        <div className="relative ">
           <h1>Customer Services</h1>
           <div className="w-full h-[3px] bg-Border absolute top-9  left-0"></div>
 

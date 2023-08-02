@@ -1,5 +1,7 @@
 import React from 'react'
 import { AiOutlineRight } from 'react-icons/ai'
+import { categories } from '../../../public/AllPhones'
+import Category from './Category'
 
 const Categories = () => {
   return (
@@ -17,6 +19,14 @@ const Categories = () => {
                 </div>
             <div className='bg-Border w-full h-[1px]  absolute top-8 left-0 rounded-full '></div>
             </div>
+        </div>
+
+        {/* all categories */}
+
+        <div className='flex flex-wrap md:flex-row gap-6 md:gap-9 justify-center items-center'>
+          {categories.map((category,index) => (
+            <Category {...category} key={index} index={index}/>
+          ))}
         </div>
     </div>
   )
