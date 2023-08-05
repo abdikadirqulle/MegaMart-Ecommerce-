@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
-import { CaloryState } from '../../../Atom'
+import { CaloryState } from '../Atom/Atom'
 
 const CategoryCart = () => {
   const [showCategory, setShowCategory] = useRecoilState(CaloryState)

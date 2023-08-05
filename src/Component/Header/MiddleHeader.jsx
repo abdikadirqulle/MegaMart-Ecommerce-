@@ -5,7 +5,7 @@ import { TfiMenuAlt} from "react-icons/tfi"
 import {AiOutlineMenu, AiOutlineUser} from"react-icons/ai"
 import { Link } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
-import cart from '../../../Atom'
+import cart from '../Atom/Atom'
 
 const MiddleHeader = () => {
     const [showCart ,setShowCart] = useRecoilState(cart)

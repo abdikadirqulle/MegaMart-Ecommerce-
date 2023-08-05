@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai';
 import { useRecoilState } from 'recoil';
-import cart from '../../../Atom';
+import cart from '../Atom/Atom';
 
 const Cart = () => { 
     const [showCart ,setShowCart] = useRecoilState(cart)

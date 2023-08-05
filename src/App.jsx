@@ -4,8 +4,7 @@ import { Outlet } from 'react-router-dom'
 import Footer from "./Component/Footer/Footer";
 import Cart from './Component/Header/Cart';
 import { useRecoilState } from 'recoil';
-import cart from '../Atom';
-
+import cart from "./Component/Atom/Atom"
 const App = () => {
   const [showCart ,setShowCart] = useRecoilState(cart)
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-import { CaloryState } from '../../../Atom';
+import { CaloryState } from '../Atom/Atom';
 
 const Category = ({name,image,index}) => {
 
