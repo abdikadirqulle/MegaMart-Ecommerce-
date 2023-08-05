@@ -3,7 +3,7 @@ import {CiLocationOn ,CiDiscount1,CiDeliveryTruck} from "react-icons/ci"
 
 const TopHeader = () => {
   return (
-    <div className='bg-Background1  text-Text w-full h-[42px]'>
+    <div className='bg-Background1 hidden  text-Text w-full h-[42px]'>
         <div className='flex justify-between items-center max-w-6xl mx-auto py-2'>
             <h1 className='text-Text text-[14px]'>Welcome to worldwide MegaMart!</h1>
 

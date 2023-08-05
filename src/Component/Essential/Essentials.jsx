@@ -5,7 +5,7 @@ import Essential from './Essential'
 
 const Essentials = () => {
   return (
-    <div className='max-w-6xl mx-auto  mt-[127px]'>
+    <div className='max-w-6xl mx-auto  my-[127px]'>
     <div className='flex flex-col space-y-4'>
     <div className='flex relative justify-between items-center mb-10'>
             <div className='relative'>

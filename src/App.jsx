@@ -1,27 +1,33 @@
-import Header from "./Component/Header/Header";
-import Home from './Component/Home/Home'
-import SmartPhones from "./Component/smartPhones/SmartPhones";
-import Categories from "./Component/Categories/Categories";
-import Electronics from "./Component/electronics/Electronics";
-import Essentials from "./Component/Essential/Essentials";
-import Footer from "./Component/Footer/Footer"
+import React, { useState } from 'react'
+import Header from './Component/Header/Header'
+import { Outlet } from 'react-router-dom'
+import Footer from "./Component/Footer/Footer";
+import Cart from './Component/Header/Cart';
+import { useRecoilState } from 'recoil';
+import cart from '../Atom';
 
-function App() {
+const App = () => {
+  const [showCart ,setShowCart] = useRecoilState(cart)
   return (
-    <div className="flex flex-col gap-10">
-      <div className="fixed w-full z-50" >
-        <Header />
-      </div>
-      <div className="mt-[14rem] mx-2">
-        <Home />
-        <SmartPhones />
-        <Categories />
-        <Electronics />
-        <Essentials />
-      </div>
+    <>
+      <div className="relative">
+        <div className="flex  flex-col gap-10">
+          <div className="fixed  w-full z-50">
+            <Header />
+          </div>
+          <div className="">
+          </div>
+            <Outlet />
+        </div>
         <Footer />
-    </div>
+        {showCart ? (
+          <div className="w-[16rem] rounded h-full bg-Background3 text-Heading p-4 absolute z-50 top-0 right-0">
+            <Cart />
+          </div>
+        ) : null}
+      </div>
+    </>
   );
 }
 
-export default App;
+export default App
