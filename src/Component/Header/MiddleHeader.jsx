@@ -18,7 +18,7 @@ const MiddleHeader = () => {
             <Link to="/">
               <h1
                 className="text-primary font-bold text-2xl curs"
-            //    onClick={() => setShowCart(false)}
+                //    onClick={() => setShowCart(false)}
               >
                 MegaMart
               </h1>
@@ -39,7 +39,7 @@ const MiddleHeader = () => {
             <div className="flex gap-2 items-center">
               <Link to="/SingUp">
                 <div className="flex gap-2 cursor-pointer items-center ">
-                  <AiOutlineUser className="w-6 h-6 text-primary hover:bg-Background3 hover:rounded-full hover:duration-100  cursor-pointer" />
+                  <AiOutlineUser className="sm:w-6 sm:h-6 w-[40px]  h-[40px] text-primary cursor-pointer" />
                   <h1 className="text-Text hidden lg:block font-semibold text-[16px] hover:underline">
                     Sign Up/Sign In
                   </h1>
@@ -51,7 +51,7 @@ const MiddleHeader = () => {
                 className="flex items-center gap-2 cursor-pointer"
                 onClick={() => setShowCart(!showCart)}
               >
-                <RiShoppingCartLine className="w-6 h-6 cursor-pointer text-primary" />
+                <RiShoppingCartLine className="sm:w-6 sm:h-6 w-[40px] h-[40px] cursor-pointer text-primary" />
                 <h1 className="text-Text hidden lg:block font-semibold text-[16px] hover:underline">
                   Cart
                 </h1>
