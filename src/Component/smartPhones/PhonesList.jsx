@@ -18,8 +18,8 @@ const PhonesList = ({name, image , oldPrice ,newPrice , index, save}) => {
         
         
         
-        <div className="absolute bg-White text-Heading cursor-pointer w-[225px] bottom-0 h-[106px]">
-          <div className='flex flex-col pl-3  py-2'>
+        <div className="absolute bg-White text-Heading cursor-pointer w-[230px] overflow-hidden bottom-0 h-[107px]">
+          <div className='flex flex-col pl-2  py-2'>
             <h1 className="text-[16px] font-semibold">{name}</h1>
             <div className="flex gap-2 ">
               <span className="text-[16px] font-bold text-Heading">

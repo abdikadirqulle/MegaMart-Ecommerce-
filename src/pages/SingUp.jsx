@@ -13,7 +13,7 @@ const SingUp = () => {
     return (
       <div className="bg-White w-full h-screen  mt-[7.5rem]">
         <div className=" max-w-6xl mx-auto text-White flex justify-center items-center">
-          <div className="relative flex h-screen w-screen flex-col md:items-center md:justify-center">
+          <div className="relative flex h-screen w-screen flex-col md:items-center md:justify-start">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="absolute mt-2 space-y-8 rounded-md bg-[#202844] shadow-md px-6 py-10  md:max-w-md"
