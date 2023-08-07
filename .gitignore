@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 AllPhones.js
+App
+Auth
+.env.local
+src/pages/SignIn.jsx
 *.local
 
 # Editor directories and files

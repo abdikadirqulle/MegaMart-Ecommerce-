@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Error404 = () => {
   return (
     <div className="bg-Heading text-White w-full h-screen flex flex-col gap-10 justify-center items-center">
-      <div className='-space-y-10'>
+      <div className='space-y-10'>
 
       <div className="flex flex-col items-center gap-4 border p-4 shadow-md rounded">
         <h1 className="text-3xl font-bold">404 | </h1>

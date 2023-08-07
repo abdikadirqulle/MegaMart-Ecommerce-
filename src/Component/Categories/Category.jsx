@@ -9,7 +9,6 @@ const Category = ({name,image,index}) => {
 
   const [showCategory, setShowCategory] = useRecoilState(CaloryState)
  
-  console.log(catena)
   return (
     <div className=''>
         <div className='flex flex-col gap-4'> 
