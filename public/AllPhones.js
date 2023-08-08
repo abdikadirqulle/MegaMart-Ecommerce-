@@ -76,32 +76,39 @@ export const mobiles = [
 export const categories = [
   {
     name: "Mobile",
-    image: iphone12
+    image: iphone12,
+    description :"This will get all latest phones "
   },
   {
     name: "Cosmetics",
-    image: Cosmetic
+    image: Cosmetic,
+    description : "This will get all cosmetics "
   },
   {
     name: "Electronics",
-    image: electronic
+    image: electronic,
+    description : "This will get all electronic"
   },
   {
     name: "Furniture",
-    image: Furniture
+    image: Furniture,
+    description : "This will get all furniture"
   },
   {
     name: "Watches",
     image: AppleWatch,
+    description : "This will get all watches"
     
   }, 
   {
     name: "Decor",
-    image: decor
+    image: decor,
+    description : "This will get all decorators"
   },
   {
     name: "Accessories",
-    image: Accessor
+    image: Accessor,
+    description : "This will get all accessories"
   },
 ];
 

@@ -13,7 +13,7 @@ const Header = () => {
       <div className="border-b border-solid  border-[#D9D9D9]">
         <MiddleHeader />
       </div>
-      <div className="border-b border-solid border-[#D9D9D9]">
+      <div className="border-b hidden border-solid border-[#D9D9D9]">
         <BottomHeader />
       </div>
     </div>

@@ -9,7 +9,7 @@ const SmartPhones = () => {
 
   return (
  
-    <div className='max-w-6xl mx-auto mt-[127px]'>
+    <div className='max-w-6xl mx-auto mt-[80px]'>
         <div className='flex flex-col space-y-4'>
             {/* header name */}
             <div className='flex relative justify-between items-center mb-10'>
@@ -28,7 +28,6 @@ const SmartPhones = () => {
             {/* mobiles */}
             <div className='flex flex-wrap md:flex-row gap-6 md:gap-4  justify-center lg:justify-start lg:flex-nowrap items-center'>
                {mobiles.map((mobile,index) => (
-
                 <PhonesList key={mobile.name} index={index} {...mobile} />
             ))}
             </div>

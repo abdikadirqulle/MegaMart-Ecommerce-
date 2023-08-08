@@ -9,6 +9,9 @@ import Error404 from './error404.jsx'
 import { RecoilRoot } from 'recoil'
 import CategoryCart from './Component/Categories/CategoriesCart.jsx'
 import SignIn from './pages/SignIn.jsx'
+import PhonesCart from './Component/smartPhones/PhonesCart.jsx'
+import EssentialCart from './Component/Essential/EssentialCart.jsx'
+import Cart from './Component/Header/Cart.jsx'
  
 
 
@@ -29,20 +32,21 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/categories",
+        path: "/categories/:id",
         element: <CategoryCart />,
       },
+      {
+        path: "/phones/:id",
+        element: <PhonesCart />,
+      },
+     
+      {
+        path: "/essentialCart/:id",
+        element: <EssentialCart />,
+      },
       // {
-      //   path: "/new-post",
-      //   element: <NewPost />,
-      // },
-      // {
-      //   path: "/messages",
-      //   element: <Messages />,
-      // },
-      // {
-      //   path: "/post/:id",
-      //   element: <PostInfo />,
+      //   path: "/cart",
+      //   element: <Cart />,
       // },
     ],
   },

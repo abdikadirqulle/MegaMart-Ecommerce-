@@ -18,7 +18,6 @@ const MiddleHeader = () => {
             <Link to="/">
               <h1
                 className="text-primary font-bold text-2xl curs"
-                //    onClick={() => setShowCart(false)}
               >
                 MegaMart
               </h1>
@@ -48,8 +47,8 @@ const MiddleHeader = () => {
               </Link>
 
               <div
-                className="flex items-center gap-2 cursor-pointer"
                 onClick={() => setShowCart(!showCart)}
+                className="flex items-center gap-2 cursor-pointer"
               >
                 <RiShoppingCartLine className="sm:w-6 sm:h-6 w-9 h-9 cursor-pointer text-primary" />
                 <h1 className="text-Text hidden lg:block font-semibold text-[16px] hover:underline">
