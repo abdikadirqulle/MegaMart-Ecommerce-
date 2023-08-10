@@ -6,9 +6,13 @@ import {AiOutlineMenu, AiOutlineUser} from"react-icons/ai"
 import { Link } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
 import cart from '../Atom/Atom'
+import { useDispatch, useSelector } from 'react-redux'
 
 const MiddleHeader = () => {
     const [showCart ,setShowCart] = useRecoilState(cart)
+    const count = useSelector((store) => store.counter.value)
+    // console.log(counterSlice)
+    const dispatch = useDispatch()
   return (
     <>
       <div className="max-w-6xl mx-auto h-[90px] items-center relative py-2 px-2">
@@ -50,7 +54,10 @@ const MiddleHeader = () => {
                 onClick={() => setShowCart(!showCart)}
                 className="flex items-center gap-2 cursor-pointer"
               >
+                <div className='relative'>
+                  <div className='w-6 h-6 rounded-full text-White text-xl  absolute -right-2 -top-2 md:-top-4 p-2  bg-[#e64040] flex items-center justify-center'>0</div>
                 <RiShoppingCartLine className="sm:w-6 sm:h-6 w-9 h-9 cursor-pointer text-primary" />
+                </div>
                 <h1 className="text-Text hidden lg:block font-semibold text-[16px] hover:underline">
                   Cart
                 </h1>

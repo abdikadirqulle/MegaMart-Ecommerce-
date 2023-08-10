@@ -3,18 +3,23 @@ import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { phonesState } from '../Atom/Atom';
 import { data } from 'autoprefixer';
+import { useDispatch, useSelector } from 'react-redux';
+import { setcounters } from '../../features/counter/counterSlice';
 
 const PhonesList = ({name, image , oldPrice ,newPrice , index, save}) => {
 
-  const [showPhones, setShowPhones] = useRecoilState(phonesState)
+  const id = index;
+  const data = { name, image, oldPrice, newPrice, index, save };
 
-  
-  const data =  {name, image , oldPrice ,newPrice , index, save}
-  const id = index
+  const counterSlice = useSelector((store) => store.counter.default)
+  const dispatch = useDispatch()
 
+  const sendData = () => {
+    dispatch(setcounters(data))
+  };
   return (
     <div className="flex">
-      <Link to={`/phones/${id}`} onClick={() => setShowPhones(data)}>
+      <Link to={`/phones/${id}`} onClick={sendData}>
         <div
           className={`w-[227px] relative h-[295px] border-[1px] border-Border overflow-hidden ${
             index == 1 && "border-primary shadow-2xl"

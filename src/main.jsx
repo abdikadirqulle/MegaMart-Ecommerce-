@@ -12,6 +12,8 @@ import SignIn from './pages/SignIn.jsx'
 import PhonesCart from './Component/smartPhones/PhonesCart.jsx'
 import EssentialCart from './Component/Essential/EssentialCart.jsx'
 import Cart from './Component/Header/Cart.jsx'
+import { Provider } from 'react-redux'
+import {store} from './store.js'
  
 
 
@@ -57,12 +59,15 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
+
+
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <RecoilRoot>
       <RouterProvider router={router}>
-       
       </RouterProvider>
     </RecoilRoot>
+    </Provider>
   </React.StrictMode>
 );

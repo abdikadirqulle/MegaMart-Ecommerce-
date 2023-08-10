@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const CaloryState = atom({
   key: "CaloryState",
- default : null,
+ default : [],
 });
 export const phonesState = atom({
   key: "phonesState",

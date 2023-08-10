@@ -4,9 +4,12 @@ import { Outlet } from 'react-router-dom'
 import Cart from './Component/Header/Cart';
 import { useRecoilState } from 'recoil';
 import cart from "./Component/Atom/Atom"
+import { useSelector } from 'react-redux';
 
 const App = () => {
   const [showCart ,setShowCart] = useRecoilState(cart)
+
+
   return (
     <>
       <div className="relative">
