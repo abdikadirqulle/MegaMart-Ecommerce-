@@ -38,12 +38,14 @@ export const mobiles = [
   {
     name: "Galaxy S21 Ultra",
     oldPrice: "₹74999",
+    id : 1,
     newPrice: "₹32999",
     save: "Save - ₹32999",
     image: s21,
   },
   {
     name: "iPhone 12 Pro Max (128GB)",
+    id : 2,
     newPrice: "₹67999",
     oldPrice: "₹85999",
     save: "Save - ₹18000",
@@ -51,6 +53,7 @@ export const mobiles = [
   },
   {
     name: "Galaxy A71 (4GB | 64 GB )",
+    id : 3,
     newPrice: "₹10499",
     oldPrice: "₹14999",
     save: "Save - ₹4500",
@@ -58,6 +61,7 @@ export const mobiles = [
   },
   {
     name: "Galaxy A31 (4GB | 64 GB )",
+    id : 4,
     newPrice: "₹16999",
     oldPrice: "₹24999",
     save: "Save - ₹8000",
@@ -65,6 +69,7 @@ export const mobiles = [
   },
   {
     name: "Galaxy A52 (4GB | 64 GB )",
+    id : 5,
     newPrice: "₹31999",
     oldPrice: "₹40999",
     save: "Save - ₹9000",

@@ -14,6 +14,7 @@ import EssentialCart from './Component/Essential/EssentialCart.jsx'
 import Cart from './Component/Header/Cart.jsx'
 import { Provider } from 'react-redux'
 import {store} from './store.js'
+import { StateContext } from './context/StateContext.jsx'
  
 
 
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <Error404 />,
+    errorElement: <App />,
     children: [
       {
         path: "/",
@@ -63,11 +64,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
+    <StateContext>
     <Provider store={store}>
     <RecoilRoot>
       <RouterProvider router={router}>
       </RouterProvider>
     </RecoilRoot>
     </Provider>
+    </StateContext>
   </React.StrictMode>
 );

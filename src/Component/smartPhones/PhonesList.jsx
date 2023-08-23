@@ -1,28 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
-import { phonesState } from '../Atom/Atom';
-import { data } from 'autoprefixer';
 import { useDispatch, useSelector } from 'react-redux';
-import { setcounters } from '../../features/counter/counterSlice';
+import { setcounters ,setValues } from '../../features/counter/counterSlice';
 
-const PhonesList = ({name, image , oldPrice ,newPrice , index, save}) => {
+const PhonesList = ({name, image , oldPrice ,newPrice ,  id,save}) => {
 
-  const id = index;
-  const data = { name, image, oldPrice, newPrice, index, save };
+  const data = { name, image, oldPrice, id, newPrice, save };
 
   const counterSlice = useSelector((store) => store.counter.default)
   const dispatch = useDispatch()
 
   const sendData = () => {
+    // dispatch(setValues(value))
     dispatch(setcounters(data))
   };
+
   return (
     <div className="flex">
       <Link to={`/phones/${id}`} onClick={sendData}>
         <div
           className={`w-[227px] relative h-[295px] border-[1px] border-Border overflow-hidden ${
-            index == 1 && "border-primary shadow-2xl"
+            id == 2 && "border-primary shadow-2xl"
           } border-solid  bg-Background1 rounded-[16px]`}
         >
           {/* image */}

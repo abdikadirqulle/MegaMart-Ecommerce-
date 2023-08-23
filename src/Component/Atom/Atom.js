@@ -4,19 +4,10 @@ export const CaloryState = atom({
   key: "CaloryState",
  default : [],
 });
-export const phonesState = atom({
-  key: "phonesState",
- default : null,
-});
 
 export const essentialState = atom({
   key: "essentialState",
  default : null,
 });
 
-const cart = atom({
-  key: "CartState",
-  default: false,
-});
 
-export default cart

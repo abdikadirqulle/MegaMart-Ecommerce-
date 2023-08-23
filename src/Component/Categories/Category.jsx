@@ -2,13 +2,22 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { CaloryState } from '../Atom/Atom';
+import { useDispatch } from 'react-redux';
+// import { setcatogiries } from '../../features/categories/CatagoriesSlice';
 
 
 const Category = ({name,image,index,description}) => {
 
+    const [showCategory, setShowCategory] = useRecoilState(CaloryState)
+
   const data = {name,index, image ,description}
   const id = index
-  const [showCategory, setShowCategory] = useRecoilState(CaloryState)
+
+  const dispatch = useDispatch()
+
+  const sendData =() => {
+    // dispatch(setcatogiries(data))
+  }
   return (
     <div className=''>
         <div className='flex flex-col gap-4'> 

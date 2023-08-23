@@ -4,7 +4,8 @@ import { CaloryState } from "../Atom/Atom";
 
 const CategoryCart = () => {
   const [showCategory, setShowCategory] = useRecoilState(CaloryState)
-
+  // const categoriesdef = useSelector((store) => store.catagories.default)
+ 
   const {index, image ,name ,description} = showCategory
   return (
     <div className="max-w-6xl mx-auto mt-[9rem] h-screen py-4 w-full">
@@ -19,7 +20,7 @@ const CategoryCart = () => {
             <div className=" flex flex-col gap-4">
               <h1 className="font-bold text-2xl">{name}</h1>
               <h2 className="text-Light font-medium">{description}</h2>
-              <span className="text-3xl font-mono text-Heading">$400</span>
+              <span className="text-3xl font-mono text-Heading">$40</span>
             </div>
           </div>
         </div>
