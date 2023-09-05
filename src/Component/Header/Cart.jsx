@@ -6,28 +6,43 @@ import EmptyCart from "../../../public/empty-cart.png"
 import './cartPage/cart.css';
 import { Link } from 'react-router-dom';
 import { useStateContext } from "../../context/StateContext";
-import { increment, decrement, setDeleteCart, setCart, setCartValue } from '../../features/cart/CartSlice';
+// import { increment, decrement, setDeleteCart, setCart, setCartValue } from '../../features/cart/CartSlice';
+import { decremented, incremented, setRemoveEssentialCart } from '../../features/products/productSlice';
 
 const Cart = () => { 
 
   const {
     toggleCart,
     cartItem,
-    totalPrice,
+    // totalPrice,
     updateCartItemQty,
     handleCartItemRemove,
   } = useStateContext();
 
     const {value} = useSelector((state) => state.cart)
-    const data = useSelector((state) => state.cart.default)    // const {saveData} = useSelector((state) => state.cart)
+    const data = useSelector((state) => state.products.product)    // const {saveData} = useSelector((state) => state.cart)
 
-    let [name, image , oldPrice ,newPrice ,id, save] = data
 
     const dispatch = useDispatch();
 
-    console.log(save)
-    const handelDelete = () => {
-      dispatch(setDeleteCart())
+    const totalPrice = data.map(item => item.cartPrice)
+
+    let AllPrice = 0;
+// iterate over each item in the array
+for (let i = 0; i < totalPrice.length; i++ ) {
+  AllPrice += totalPrice[i];
+}
+
+
+
+let USDollar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+});
+
+
+    const handelDelete = (item) => {
+      dispatch(setRemoveEssentialCart(item))
     }
   return (
     <>
@@ -69,10 +84,8 @@ const Cart = () => {
                 <div className="cart-body">
                   {data.map((item, i) => (
                     <div key={i} className="cart-item">
-                      {/* {console.log(item)} */}
                       <div className="cart-item-left">
                         <img
-                          // src={urlFor(item?.image[0])}
                           src={item.image}
                           alt="product img"
                           className="cart-item-img"
@@ -81,32 +94,32 @@ const Cart = () => {
                       </div>
                       <div className="cart-item-mid">
                         <h4 className="cart-item-title">{item?.name}</h4>
-                        <span className="cart-item-code">
-                          ddd
+                        <span className="cart-item-code text-Text">
+                          Item ID
                         </span>
                         <div className="gnt-changer-container">
                           <div
                             className="cart-qnt-changer qnt-minus"
                             onClick={() => {
-                              dispatch(decrement())
+                              dispatch(decremented(item))
                             }}
                           >
                             <span>&#8722;</span>
                           </div>
-                          <div className="cart-qnt">{value}</div>
+                          <div className="cart-qnt">{item?.cartQuantity}</div>
                           <div
                             className="cart-qnt-changer qnt-plus"
-                              onClick={() => dispatch(increment())}
+                              onClick={() => dispatch(incremented(item))}
                           >
                             <span>&#43;</span>
                           </div>
                         </div>
                       </div>
                       <div className="cart-item-right">
-                        <div className="cart-item-price">{item?.newPrice}</div>
+                        <div className="cart-item-price">{`${USDollar.format(item?.cartPrice)}`}</div>
                         <div
                           className="cart-item-remove"
-                          onClick={handelDelete}
+                          onClick={() => handelDelete(item)}
                         >
                           <span>&#10006;</span>
                         </div>
@@ -117,7 +130,7 @@ const Cart = () => {
                 <div className="cart-footer">
                   <div className="cart-footer-title">Subtotal</div>
                   <div className="subtotal-container">
-                    <span className="subtotal">500$</span>
+                    <span className="subtotal">{`${USDollar.format(AllPrice)}`}</span>
                     <div 
                     onClick={()=> {dispatch(setClose())}} 
                     className="add-to-cart-btn">

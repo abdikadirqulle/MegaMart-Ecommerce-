@@ -1,28 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './features/counter/counterSlice';
 import CartReducer from './features/cart/CartSlice';
-// import catagoriesSlice  from './features/categories/CatagoriesSlice';
+import CategoryReducer from './features/categories/CategorySlice';
+import essentialsReducer from './features/essential/essentialsSlice';
+import productReducer from './features/products/productSlice';
 
 export const store = configureStore({
   reducer: {
-    counter : counterReducer,
-    cart : CartReducer
-    // catagories : catagoriesSlice
+    counter: counterReducer,
+    cart: CartReducer,
+    category: CategoryReducer,
+    essentials : essentialsReducer,
+    products : productReducer
   },
 });
-
-
-
-
-
-
-// import { SET_AUTHED_USER } from '../actions/authedUser'
-
-// export default function authedUser (state = null, action) {
-//   switch (action.type) {
-//     case SET_AUTHED_USER :
-//       return action.id
-//     default :
-//       return state
-//   }
-// }

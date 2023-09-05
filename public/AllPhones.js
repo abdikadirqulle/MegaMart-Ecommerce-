@@ -37,42 +37,42 @@ import Cherry from "../src/images/Essential images/cherry.png"
 export const mobiles = [
   {
     name: "Galaxy S21 Ultra",
-    oldPrice: "₹74999",
+    oldPrice: 1200,
     id : 1,
-    newPrice: "₹32999",
-    save: "Save - ₹32999",
+    newPrice: 1099,
+    save: "Save - $101.00",
     image: s21,
   },
   {
     name: "iPhone 12 Pro Max (128GB)",
     id : 2,
-    newPrice: "₹67999",
-    oldPrice: "₹85999",
-    save: "Save - ₹18000",
+    newPrice: 999,
+    oldPrice: 1100,
+    save: "Save - $101.00",
     image: iphone12,
   },
   {
     name: "Galaxy A71 (4GB | 64 GB )",
     id : 3,
-    newPrice: "₹10499",
-    oldPrice: "₹14999",
-    save: "Save - ₹4500",
+    newPrice: 249,
+    oldPrice: 260,
+    save: "Save - $11.00",
     image: A71,
   },
   {
     name: "Galaxy A31 (4GB | 64 GB )",
     id : 4,
-    newPrice: "₹16999",
-    oldPrice: "₹24999",
-    save: "Save - ₹8000",
+    newPrice: 230,
+    oldPrice: 240,
+    save: "Save - $10.00",
     image: A31,
   },
   {
     name: "Galaxy A52 (4GB | 64 GB )",
     id : 5,
-    newPrice: "₹31999",
-    oldPrice: "₹40999",
-    save: "Save - ₹9000",
+    newPrice: 242,
+    oldPrice: 250,
+    save: "Save - $8.00",
     image: A52,
   },
 ];
@@ -80,40 +80,68 @@ export const mobiles = [
 
 export const categories = [
   {
+    id : 6,
     name: "Mobile",
     image: iphone12,
-    description :"This will get all latest phones "
+    newPrice : 1099,
+    save : "save -100.00",
+    description : "Designed by Böttcher & Kayser, Nivo is a minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf."
+    // description :"This will get all latest phones "
   },
   {
+    id : 7,
     name: "Cosmetics",
     image: Cosmetic,
-    description : "This will get all cosmetics "
+    newPrice : 48,
+    save : "save -8.00",
+    description : "Designed by Böttcher & Kayser, Nivo is a minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf."
+    // description : "This will get all cosmetics "
   },
   {
+    id : 8,
     name: "Electronics",
     image: electronic,
-    description : "This will get all electronic"
+    newPrice : 1200,
+    save : "save -332.00",
+    description : "Designed by Böttcher & Kayser, Nivo is a minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf."
+    // description : "This will get all electronic"
   },
   {
+    id : 9,
     name: "Furniture",
     image: Furniture,
-    description : "This will get all furniture"
+    newPrice : 600,
+    save : "save -21.00",
+    description : "Designed by Böttcher & Kayser, Nivo is a minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf."
+    // description : "This will get all furniture"
   },
   {
+    id : 10,
     name: "Watches",
     image: AppleWatch,
-    description : "This will get all watches"
+    newPrice : 30,
+    save : "save -19.00",
+    description : "Designed by Böttcher & Kayser, Nivo is a minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf."
+    // description : "This will get all watches"
     
   }, 
   {
+    id : 11,
     name: "Decor",
     image: decor,
-    description : "This will get all decorators"
+    newPrice : 70,
+    save : "save -3.00",
+    description : "Designed by Böttcher & Kayser, Nivo is a minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf."
+    // description : "This will get all decorators"
   },
   {
+    id : 12,
     name: "Accessories",
     image: Accessor,
-    description : "This will get all accessories"
+    newPrice : 220,
+    save : "save -8.00",
+    description : "Designed by Böttcher & Kayser, Nivo is a minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf."
+    // description : "This will get all accessories"
   },
 ];
 
@@ -143,34 +171,46 @@ export const electronics = [
 
 
 export const essentials = [
-    {
-        name: "Daily Essentials",
-        priceSave: "UP to 50% OFF",
-        image: dailyEssential
-    },
-    {
-        name: "Vegitables",
-        priceSave: "UP to 50% OFF",
-        image: Vegitables
-    },
-    {
-        name: "Fruits",
-        priceSave: "UP to 50% OFF",
-        image: Fruits
-    },
-    {
-        name: "Strowberry",
-        priceSave: "UP to 50% OFF",
-        image: Strowberry
-    },
-    {
-        name: "Mango",
-        priceSave: "UP to 50% OFF",
-        image: Mango
-    },
-    {
-        name: "Cherry",
-        priceSave: "UP to 50% OFF",
-        image: Cherry
-    },
-]
+  {
+    name: "Daily Essentials",
+    priceSave: "UP to 50% OFF",
+    id: 13,
+    newPrice: 32.00,
+    image: dailyEssential,
+  },
+  {
+    name: "Vegitables",
+    priceSave: "UP to 50% OFF",
+    id: 14,
+    newPrice: 8.00,
+    image: Vegitables,
+  },
+  {
+    name: "Fruits",
+    priceSave: "UP to 50% OFF",
+    id: 15,
+    newPrice: 66.00,
+    image: Fruits,
+  },
+  {
+    name: "Strowberry",
+    priceSave: "UP to 50% OFF",
+    id: 16,
+    newPrice: 36.00,
+    image: Strowberry,
+  },
+  {
+    name: "Mango",
+    priceSave: "UP to 50% OFF",
+    id: 17,
+    newPrice: 12.00,
+    image: Mango,
+  },
+  {
+    name: "Cherry",
+    priceSave: "UP to 50% OFF",
+    id: 18,
+    newPrice: 29.00,
+    image: Cherry,
+  },
+];

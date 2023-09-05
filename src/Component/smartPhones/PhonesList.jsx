@@ -3,16 +3,14 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setcounters ,setValues } from '../../features/counter/counterSlice';
 
-const PhonesList = ({name, image , oldPrice ,newPrice ,  id,save}) => {
+const PhonesList = ({name, image , oldPrice ,newPrice , id ,save}) => {
 
   const data = { name, image, oldPrice, id, newPrice, save };
 
   const counterSlice = useSelector((store) => store.counter.default)
   const dispatch = useDispatch()
-
   const sendData = () => {
-    // dispatch(setValues(value))
-    dispatch(setcounters(data))
+    dispatch(setcounters(data));
   };
 
   return (
@@ -38,10 +36,10 @@ const PhonesList = ({name, image , oldPrice ,newPrice ,  id,save}) => {
               <h1 className="text-[16px] font-semibold">{name}</h1>
               <div className="flex gap-2 ">
                 <span className="text-[16px] font-bold text-Heading">
-                  {newPrice}
+                  ${newPrice}.00
                 </span>
                 <span className="text-[1rem] font-normal line-through	">
-                  {oldPrice}
+                  ${oldPrice}.00
                 </span>
               </div>
               <div className="bg-Border w-[201px] h-[1px] my-2"></div>

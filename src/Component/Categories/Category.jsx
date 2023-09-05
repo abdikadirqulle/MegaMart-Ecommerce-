@@ -1,29 +1,27 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { useRecoilState } from 'recoil';
-import { CaloryState } from '../Atom/Atom';
-import { useDispatch } from 'react-redux';
-// import { setcatogiries } from '../../features/categories/CatagoriesSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCategoryData } from '../../features/categories/CategorySlice';
 
 
-const Category = ({name,image,index,description}) => {
+const Category = ({name,image,index,description,save,newPrice,id}) => {
 
-    const [showCategory, setShowCategory] = useRecoilState(CaloryState)
+    
 
-  const data = {name,index, image ,description}
-  const id = index
+   const data = {name,index, image ,description,newPrice,save,id}
+  
 
   const dispatch = useDispatch()
 
   const sendData =() => {
-    // dispatch(setcatogiries(data))
+    dispatch(setCategoryData(data))
   }
   return (
     <div className=''>
         <div className='flex flex-col gap-4'> 
-        <Link to={`/categories/${id}`} onClick={() => setShowCategory(data)}>
+        <Link to={`/categories/${id}`} onClick={sendData}>
             <div className={`bg-Background1 cursor-pointer w-[132px] h-[132px] flex items-center justify-center rounded-full ${index == 0 && "border-[1px] shadow-xl border-primary border-solid"}`}>
-                <img src={image} className='w-[5rem]' alt="" />
+                <img src={image} className='w-[5rem]' alt=""/>
             </div>
         </Link>
             <div className='flex items-center justify-center'>

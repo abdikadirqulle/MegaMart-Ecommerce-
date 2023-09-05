@@ -4,6 +4,7 @@ import{increment ,decrement} from "../../features/counter/counterSlice"
 import { setCart, setCartValue } from '../../features/cart/CartSlice'
 import { toast } from 'react-hot-toast'
 import { useStateContext } from '../../context/StateContext'
+import { setproductData } from '../../features/products/productSlice'
 
 const PhonesCart = () => {
 
@@ -13,17 +14,19 @@ const PhonesCart = () => {
     const value = useSelector((store) => store.counter.value)
     const data = useSelector((store) => store.cart.default)
     
-    
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
-    const {name, image , oldPrice ,newPrice , index, save} = counterSlice
+    const {name, image , oldPrice ,newPrice , index, save ,id} = counterSlice
 
     const sendValue = () => {
-      dispatch(setCartValue(value)),
-      toast.success( value > 1
+
+      dispatch(setproductData(counterSlice))
+       toast.success( value > 1
         ? `${value} Products added to the cart.`
-        : `One product added to your cart.`),
-        dispatch(setCart([...data, counterSlice]))
+        : `One product added to your cart.`)
+      // dispatch(setCartValue(value)),
+      
+      //   dispatch(setCart([...data, counterSlice]))
     } 
     
     return (
@@ -39,7 +42,7 @@ const PhonesCart = () => {
               <div className=" flex flex-col gap-4">
                 <h1 className="font-bold text-2xl">{name}</h1>
                 <span className="text-3xl font-mono text-Heading">
-                  {newPrice}
+                  {newPrice}$
                 </span>
                 <h2 className="text-Green font-bold">{save}</h2>
               </div>

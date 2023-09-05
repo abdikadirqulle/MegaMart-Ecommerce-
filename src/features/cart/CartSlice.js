@@ -11,7 +11,15 @@ export const cartSlice = createSlice({
 
     reducers : {
         setCartValue :  (state, action) => {
-            state.value += action.payload
+            const itemIdex = state.default.findIndex((item) => item.id === action.payload.id)
+            // console.log(state.default)
+            if(itemIdex >= 0) {
+                state.default[itemIdex].cartQuantity += 1
+            } else {
+                 const tempProduct = {...action.payload , cartQuantity: 1};
+                 state.default = tempProduct;
+            }
+            // state.value += action.payload
         },
         setCart : (state,action) => {
             state.default = action.payload

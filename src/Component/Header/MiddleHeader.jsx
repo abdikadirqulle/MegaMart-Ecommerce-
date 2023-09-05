@@ -11,9 +11,17 @@ const MiddleHeader = () => {
 
 
   const {value} = useSelector((state) => state.cart)
+  const {product} = useSelector(state => state.products)
 
+const cartQuantity = product.map(product => product.cartQuantity)
 
-  const dispatch = useDispatch()
+let sum = 0;
+// iterate over each item in the array
+for (let i = 0; i < cartQuantity.length; i++ ) {
+  sum += cartQuantity[i];
+}
+
+const dispatch = useDispatch()
 
   return (
     <>
@@ -57,7 +65,11 @@ const MiddleHeader = () => {
                 className="flex items-center gap-2 cursor-pointer"
               >
                 <div className='relative'>
-                  <div className='w-6 h-6 rounded-full text-White text-xl  absolute -right-2 -top-2 md:-top-4 p-2  bg-[#e64040] flex items-center justify-center'>{value ? value : 0}</div>
+                  {sum <= 0 ? null : (
+                    <div className={`w-6 h-6 rounded-full text-White  text-lg absolute -right-2 -top-2 md:-top-4    bg-[#e64040] flex items-center justify-center`}>
+                      <span>{sum}</span>
+                  </div>
+                    )}
                 <RiShoppingCartLine className="sm:w-6 sm:h-6 w-9 h-9 cursor-pointer text-primary" />
                 </div>
                 <h1 className="text-Text hidden lg:block font-semibold text-[16px] hover:underline">
