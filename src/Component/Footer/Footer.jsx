@@ -68,7 +68,7 @@ const Footer = () => {
         <div className="absolute bottom-2 left-0 border-t border-solid   border-[#05ABF3] text-center bg- w-full h-10 ">
           <div className="py-2">
             <p className="text-[18px] font-light ">
-              © {data} All rights reserved. Reliance Retail Ltd.
+              © {data} All rights reserved. Abdikadir qulle Ltd.
             </p>
           </div>
         </div>

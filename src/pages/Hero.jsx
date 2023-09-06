@@ -15,8 +15,8 @@ const Hero = () => {
         <Categories />
         <Electronics />
         <Essentials />
-        <Footer />
       </div>
+        <Footer />
     </div>
   )
 }

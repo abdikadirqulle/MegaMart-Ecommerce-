@@ -41,6 +41,7 @@ export const mobiles = [
     id : 1,
     newPrice: 1099,
     save: "Save - $101.00",
+    description : "Easy Mini W75 from Antidark lives fully up to its name. Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
     image: s21,
   },
   {
@@ -49,6 +50,7 @@ export const mobiles = [
     newPrice: 999,
     oldPrice: 1100,
     save: "Save - $101.00",
+    description : "Easy Mini W75 from Antidark lives fully up to its name. Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
     image: iphone12,
   },
   {
@@ -57,6 +59,7 @@ export const mobiles = [
     newPrice: 249,
     oldPrice: 260,
     save: "Save - $11.00",
+    description : "Easy Mini W75 from Antidark lives fully up to its name. Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
     image: A71,
   },
   {
@@ -65,6 +68,7 @@ export const mobiles = [
     newPrice: 230,
     oldPrice: 240,
     save: "Save - $10.00",
+    description : "Easy Mini W75 from Antidark lives fully up to its name. Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
     image: A31,
   },
   {
@@ -73,6 +77,7 @@ export const mobiles = [
     newPrice: 242,
     oldPrice: 250,
     save: "Save - $8.00",
+    description : "Easy Mini W75 from Antidark lives fully up to its name. Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
     image: A52,
   },
 ];
@@ -176,6 +181,7 @@ export const essentials = [
     priceSave: "UP to 50% OFF",
     id: 13,
     newPrice: 32.00,
+    description : "Tom Dixon and FRONT have created an incredibly beautiful pendant, in a completely unique design. The lamp is made using a special metallization technology that makes the look completely unique. The first of its kind. the lamp is transparent when its on and you can see the exciting play of colors.",
     image: dailyEssential,
   },
   {
@@ -183,6 +189,7 @@ export const essentials = [
     priceSave: "UP to 50% OFF",
     id: 14,
     newPrice: 8.00,
+    description : "Tom Dixon and FRONT have created an incredibly beautiful pendant, in a completely unique design. The lamp is made using a special metallization technology that makes the look completely unique. The first of its kind. the lamp is transparent when its on and you can see the exciting play of colors.",
     image: Vegitables,
   },
   {
@@ -190,6 +197,7 @@ export const essentials = [
     priceSave: "UP to 50% OFF",
     id: 15,
     newPrice: 66.00,
+    description : "Tom Dixon and FRONT have created an incredibly beautiful pendant, in a completely unique design. The lamp is made using a special metallization technology that makes the look completely unique. The first of its kind. the lamp is transparent when its on and you can see the exciting play of colors.",
     image: Fruits,
   },
   {
@@ -197,6 +205,7 @@ export const essentials = [
     priceSave: "UP to 50% OFF",
     id: 16,
     newPrice: 36.00,
+    description : "Tom Dixon and FRONT have created an incredibly beautiful pendant, in a completely unique design. The lamp is made using a special metallization technology that makes the look completely unique. The first of its kind. the lamp is transparent when its on and you can see the exciting play of colors.",
     image: Strowberry,
   },
   {
@@ -204,6 +213,7 @@ export const essentials = [
     priceSave: "UP to 50% OFF",
     id: 17,
     newPrice: 12.00,
+    description : "Tom Dixon and FRONT have created an incredibly beautiful pendant, in a completely unique design. The lamp is made using a special metallization technology that makes the look completely unique. The first of its kind. the lamp is transparent when its on and you can see the exciting play of colors.",
     image: Mango,
   },
   {
@@ -211,6 +221,7 @@ export const essentials = [
     priceSave: "UP to 50% OFF",
     id: 18,
     newPrice: 29.00,
+    description : "Tom Dixon and FRONT have created an incredibly beautiful pendant, in a completely unique design. The lamp is made using a special metallization technology that makes the look completely unique. The first of its kind. the lamp is transparent when its on and you can see the exciting play of colors.",
     image: Cherry,
   },
 ];

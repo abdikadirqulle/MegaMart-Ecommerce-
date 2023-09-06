@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setcounters ,setValues } from '../../features/counter/counterSlice';
 
-const PhonesList = ({name, image , oldPrice ,newPrice , id ,save}) => {
+const PhonesList = ({name, image , oldPrice ,newPrice ,description, id ,save}) => {
 
-  const data = { name, image, oldPrice, id, newPrice, save };
+  const data = { name, image, oldPrice, id, newPrice, save,description };
 
   const counterSlice = useSelector((store) => store.counter.default)
   const dispatch = useDispatch()
