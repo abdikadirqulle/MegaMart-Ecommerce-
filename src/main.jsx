@@ -10,7 +10,6 @@ import { RecoilRoot } from 'recoil'
 import CategoryCart from './Component/Categories/CategoriesCart.jsx'
 import PhonesCart from './Component/smartPhones/PhonesCart.jsx'
 import EssentialCart from './Component/Essential/EssentialCart.jsx'
-import Cart from './Component/Header/Cart.jsx'
 import { Provider } from 'react-redux'
 import {store} from './store.js'
  

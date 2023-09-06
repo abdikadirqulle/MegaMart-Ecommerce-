@@ -1,4 +1,3 @@
-import { SignIn } from '@clerk/clerk-react';
 import React from 'react'
 import { useForm } from 'react-hook-form';
 
@@ -7,19 +6,11 @@ const SingUp = () => {
    const {register,handleSubmit,formState: { errors }} = useForm();
     const onSubmit = (data) => console.log(data) 
 
-    const handalSubmit = (event) => {
+    const handelSubmit = (event) => {
      event.preventDefault(), 
      handleSubmit(onSubmit);
       }
     return (
-
-      // <div>
-      //   <SignIn />
-      // </div>
-
-
-
-
       <div className="bg-White w-full h-screen  mt-[7.5rem]">
         <div className=" max-w-6xl mx-auto text-White flex justify-center items-center">
           <div className="relative flex h-screen w-screen flex-col md:items-center md:justify-start">

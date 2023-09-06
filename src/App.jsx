@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Component/Header/Header'
 import { Outlet } from 'react-router-dom'
-import Cart from './Component/Header/Cart';
+import Cart from './Component/Header/cartPage/Cart';
 import { useSelector } from 'react-redux';
 import { Toaster } from 'react-hot-toast';
 
