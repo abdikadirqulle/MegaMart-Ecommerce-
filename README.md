@@ -6,4 +6,3 @@
 ![electronics](https://github.com/Daadaa33/MegaMart-Ecommerce-/assets/121563789/e894d1fd-f11f-4816-88c8-83fb3393f4a8)
 ![essentials](https://github.com/Daadaa33/MegaMart-Ecommerce-/assets/121563789/4efb5a00-cced-4930-be43-a8eeab14eb6d)
 ![footer](https://github.com/Daadaa33/MegaMart-Ecommerce-/assets/121563789/8e94d177-ca0a-400f-b2b8-80471760c4c4)
-![footer](https://github.com/Daadaa33/MegaMart-Ecommerce-/assets/121563789/8e94d177-ca0a-400f-b2b8-80471760c4c4)
