@@ -13,7 +13,6 @@ import EssentialCart from './Component/Essential/EssentialCart.jsx'
 import Cart from './Component/Header/Cart.jsx'
 import { Provider } from 'react-redux'
 import {store} from './store.js'
-import { StateContext } from './context/StateContext.jsx'
  
 
 
@@ -41,7 +40,7 @@ const router = createBrowserRouter([
         path: "/phones/:id",
         element: <PhonesCart />,
       },
-     
+
       {
         path: "/essentialCart/:id",
         element: <EssentialCart />,
@@ -52,24 +51,16 @@ const router = createBrowserRouter([
       // },
     ],
   },
- 
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-
-
-
 root.render(
   <React.StrictMode>
-    <StateContext>
     <Provider store={store}>
-    <RecoilRoot>
-      <RouterProvider router={router}>
-      </RouterProvider>
-    </RecoilRoot>
+      <RecoilRoot>
+        <RouterProvider router={router}></RouterProvider>
+      </RecoilRoot>
     </Provider>
-    </StateContext>
   </React.StrictMode>
 );

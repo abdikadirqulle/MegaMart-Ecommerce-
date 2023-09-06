@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import{increment ,decrement} from "../../features/counter/counterSlice"
 import { setCart, setCartValue } from '../../features/cart/CartSlice'
 import { toast } from 'react-hot-toast'
-import { useStateContext } from '../../context/StateContext'
 import { setproductData } from '../../features/products/productSlice'
 
 const PhonesCart = () => {

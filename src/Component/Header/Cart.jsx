@@ -5,19 +5,12 @@ import CartList from './cartPage/CartList';
 import EmptyCart from "../../../public/empty-cart.png"
 import './cartPage/cart.css';
 import { Link } from 'react-router-dom';
-import { useStateContext } from "../../context/StateContext";
 // import { increment, decrement, setDeleteCart, setCart, setCartValue } from '../../features/cart/CartSlice';
 import { decremented, incremented, setRemoveEssentialCart } from '../../features/products/productSlice';
 
 const Cart = () => { 
 
-  const {
-    toggleCart,
-    cartItem,
-    // totalPrice,
-    updateCartItemQty,
-    handleCartItemRemove,
-  } = useStateContext();
+
 
     const {value} = useSelector((state) => state.cart)
     const data = useSelector((state) => state.products.product)    // const {saveData} = useSelector((state) => state.cart)
