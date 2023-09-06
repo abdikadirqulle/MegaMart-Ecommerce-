@@ -1,9 +1,3 @@
-# React + Vite
+|| Welcome To the MegaMart Ecommerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-waxaad ku soo dartaa websiteka oo dhammaystiran .
-
-user qulle => i.a waan raadinaa sida loogu so daro.
+![home](https://github.com/Daadaa33/MegaMart-Ecommerce-/assets/121563789/c6c41add-3895-4cd1-80b8-8c26d1e89c11)
