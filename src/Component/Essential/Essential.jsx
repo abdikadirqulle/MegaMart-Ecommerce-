@@ -19,7 +19,9 @@ const Essential = ({id, name, image ,priceSave,index, description,newPrice}) => 
     <div>
          <div className='flex flex-col gap-4'> 
          <Link to={`/essentialCart/${id}`} onClick={sendData}>
-            <div className={`bg-Background1 cursor-pointer w-[132px] h-[132px] flex items-center justify-center rounded-[16px] ${index == 0 && "border-[1px] shadow-xl border-primary border-solid"}`}>
+            <div className={`bg-Background1 cursor-pointer w-[132px] 
+            h-[132px] flex items-center justify-center rounded-[16px] ${index == 0 && ""}  
+            border-solid border-[1px] border-Border hover:border-primary  duration-500 ease-in-out hover:shadow-2xl`}>
                 <img src={image} className='w-[5rem]' alt="essential"/>
             </div>
          </Link>

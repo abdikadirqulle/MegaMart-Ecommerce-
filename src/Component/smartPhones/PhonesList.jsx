@@ -17,8 +17,8 @@ const PhonesList = ({name, image , oldPrice ,newPrice ,description, id ,save}) =
     <div className="flex">
       <Link to={`/phones/${id}`} onClick={sendData}>
         <div
-          className={`w-[227px] relative h-[295px] border-[1px] border-Border overflow-hidden ${
-            id == 2 && "border-primary shadow-2xl"
+          className={`w-[227px] relative h-[295px] hover:border-primary  duration-500 ease-in-out hover:shadow-2xl border-[1px] border-Border overflow-hidden ${
+            id == 2 && ""
           } border-solid  bg-Background1 rounded-[16px]`}
         >
           {/* image */}
