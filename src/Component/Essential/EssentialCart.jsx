@@ -4,15 +4,15 @@ import { setproductData } from '../../features/products/productSlice'
 
 const EssentialCart = () => {
   
-  const {product} = useSelector(state => state.essentials)
+  const counterSlice  = useSelector(state => state.essentials.product)
   const {value} = useSelector(state => state.cart)
 
-  const { name, image, priceSave, index, id, newPrice ,description} = product;
+  const { name, image, priceSave, index, id, newPrice ,description} = counterSlice;
 
   const dispatch = useDispatch()
 
   const sendData = () => {
-    dispatch(setproductData(product))
+    dispatch(setproductData({counterSlice, value}))
   }
 
     return (

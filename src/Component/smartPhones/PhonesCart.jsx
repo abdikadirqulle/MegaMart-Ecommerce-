@@ -1,29 +1,28 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import{increment ,decrement} from "../../features/counter/counterSlice"
-import { setCart, setCartValue } from '../../features/cart/CartSlice'
+import { decrement, increment } from '../../features/cart/CartSlice'
 import { toast } from 'react-hot-toast'
-import { setproductData } from '../../features/products/productSlice'
+import { setAddProduct, setproductData } from '../../features/products/productSlice'
 
 const PhonesCart = () => {
 
 
     const counterSlice = useSelector((store) => store.counter.default)
-    const value = useSelector((store) => store.counter.value)
+    const value = useSelector((store) => store.cart.value)
     const data = useSelector((store) => store.cart.default)
+    const product = useSelector((store) => store.products.product)
     
     const dispatch = useDispatch();
 
-    const {name, image , oldPrice ,newPrice ,description, index, save ,id} = counterSlice
+    const {name, image , oldPrice ,newPrice ,description, index, save ,id } = counterSlice
 
     const sendData = () => {
-
-      dispatch(setproductData(counterSlice))
+      dispatch(setproductData({counterSlice, value}))
+      // dispatch(setAddProduct(value))
        toast.success( value > 1
         ? `${value} Products added to the cart.`
         : `One product added to your cart.`)
       // dispatch(setCartValue(value)),
-      
       //   dispatch(setCart([...data, counterSlice]))
     } 
     

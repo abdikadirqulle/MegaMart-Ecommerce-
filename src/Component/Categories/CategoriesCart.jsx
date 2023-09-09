@@ -12,13 +12,13 @@ import { setproductData } from '../../features/products/productSlice';
 const CategoriesCart = () => {
 
   const value = useSelector((store) => store.cart.value)
-  const {product} = useSelector((store) => store.category)
+  const counterSlice = useSelector((store) => store.category.product)
 
-  const {index, image ,name ,description,newPrice,save,id} = product
+  const {index, image ,name ,description,newPrice,save,id} = counterSlice
   
   const dispatch = useDispatch()
   const sendData =() => {
-    dispatch(setproductData(product))
+    dispatch(setproductData({counterSlice, value}))
   }
 
   return (

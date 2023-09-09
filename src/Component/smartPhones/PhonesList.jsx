@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setcounters ,setValues } from '../../features/counter/counterSlice';
 
 const PhonesList = ({name, image , oldPrice ,newPrice ,description, id ,save}) => {
+  
+  const counterSlice = useSelector((store) => store.counter.default)
+  const value = useSelector((store) => store.cart.value)
 
   const data = { name, image, oldPrice, id, newPrice, save,description };
 
-  const counterSlice = useSelector((store) => store.counter.default)
   const dispatch = useDispatch()
   const sendData = () => {
     dispatch(setcounters(data));

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
   key: "cartState",
   default: [],
-  value: 0,
+  value: 1,
 };
 export const cartSlice = createSlice({
     name: "cart",
@@ -34,6 +34,8 @@ export const cartSlice = createSlice({
         },
         increment : state => {
             state.value += 1
+            const itemIdex = state.default.findIndex((item) => item.id === action.payload.id)
+            state.default
         },
         setDeleteCart : (state, action) => {
            state.default = state.default.filter(cart => cart.id !== action.payload)

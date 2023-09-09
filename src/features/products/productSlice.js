@@ -7,10 +7,10 @@ const initialState = {
   product: localStorage.getItem("AllProduct")
     ? JSON.parse(localStorage.getItem("AllProduct"))
     : [],
-  value: 2,
-  cartTotalQuantity: 0,
+  // value: 0,
+  // cartTotalQuantity: 0,
 
-  cartTotalAmount: 0,
+  // cartTotalAmount: 0,
 };
 
 
@@ -39,20 +39,20 @@ const essentialSlice = createSlice({
     },
     setproductData: (state, action) => {
       const itemIdex = state.product.findIndex(
-        (item) => item.id === action.payload.id
+        (item) => item.id === action.payload.counterSlice.id
       );
       // console.log(state.product)
       if(itemIdex >= 0) {
-        state.product[itemIdex].cartQuantity += 1;
+        state.product[itemIdex].cartQuantity += action.payload.value;
         state.product[itemIdex].cartPrice = state.product[itemIdex].newPrice * state.product[itemIdex].cartQuantity
         toast.success("Increased product quantity");
       } else {
-        const tempProduct = { ...action.payload, cartQuantity: 1,cartPrice : action.payload.newPrice};
+        const tempProduct = { ...action.payload.counterSlice, cartQuantity : action.payload.value ,cartPrice : action.payload.counterSlice.newPrice };
         state.product.push(tempProduct);
         toast.success("Product added from cart");
+        // state.value = state.product[itemIdex].cartQuantity
       }
       localStorage.setItem("AllProduct", JSON.stringify(state.product));
-
       // state.product.push(action.payload)
     },
     setRemoveEssentialCart: (state, action) => {
@@ -65,8 +65,15 @@ const essentialSlice = createSlice({
 
       toast.error("Product removed from cart");
     },
+    setAddProduct : (state, action) => {
+      const itemIdex = state.product.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      // state.product[itemIdex].cartQuantity += action.payload
+      // state.value += action.payload
+    }
   },
 });
 export default essentialSlice.reducer
 
-export const { incremented, decremented,setproductData ,setRemoveEssentialCart } = essentialSlice.actions
+export const { incremented, decremented,setproductData ,setAddProduct,setRemoveEssentialCart } = essentialSlice.actions
